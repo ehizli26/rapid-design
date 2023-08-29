@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Flaticon Font -->
+    <link
+      href="{% static 'lib/flaticon/font/flaticon.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link
+      href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'lib/lightbox/css/lightbox.min.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>{% block title %} {% endblock title %}</title>
+  </head>
+  <body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark py-3">
+      <div class="container">
+        <div class="row d-flex justify-content-end">
+          <div class="col-md-6 text-center text-lg-right">
+            <div class="d-inline-flex align-items-center">
+              <a class="text-white px-3" href="">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a class="text-white px-3" href="">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a class="text-white px-3" href="">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div class="container position-relative" style="z-index: 9">
+        <nav
+          class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a href="{% url 'index' %}" class="navbar-brand">
+            <h1 class="m-0 display-5 text-white">
+              <span class="text-primary">Rapid </span>DESIGN
+            </h1>
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          > 
+            <div class="navbar-nav ml-auto py-0">
+              <div class="navbar-nav ml-auto py-0">
+                <a href="{% url 'index' %}" class="nav-item nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+                <a href="{% url 'about' %}" class="nav-item nav-link {% if request.path == '/about/' %}active{% endif %}">About</a>
+                <a href="{% url 'service' %}" class="nav-item nav-link {% if request.path == '/service/' %}active{% endif %}">Service</a>
+                <a href="{% url 'project' %}" class="nav-item nav-link {% if request.path == '/project/' %}active{% endif %}">Project</a>
+                <a href="{% url 'contact' %}" class="nav-item nav-link {% if request.path == '/contact/' %}active{% endif %}">Contact</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Under Nav Start -->
+    <div class="container-fluid bg-white py-3">
+      <div class="container">
+        <div class="row d-flex justify-content-between">
+          <div
+            class="col-lg-4 text-left text-lg-center mb-3 mb-lg-0 d-flex justify-content-start"
+          >
+            <div class="d-inline-flex text-left">
+              <h1
+                class="flaticon-email font-weight-normal text-primary m-0 mr-3"
+              ></h1>
+              <div class="d-flex flex-column">
+                <h5>Email Us</h5>
+                <p class="m-0">rapiddesignllc@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-left text-lg-right mb-3 mb-lg-0">
+            <div class="d-inline-flex text-left">
+              <h1
+                class="flaticon-telephone font-weight-normal text-primary m-0 mr-3"
+              ></h1>
+              <div class="d-flex flex-column">
+                <h5>Call Us</h5>
+                <p class="m-0">(856)-834-8247</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Under Nav End -->
+
+    {% block body %} {% endblock body %}
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white px-sm-3 px-md-5">
+      <div class="container border-top border-secondary py-5">
+        <p class="m-0 text-center text-white">
+          &copy;
+          <span class="text-white font-weight-bold"
+            >Rapid Kitchen & Bath Design</span
+          >. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %} "></script>
+  </body>
+</html>
