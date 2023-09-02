@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from django.core.mail import send_mail
-from .forms import ContactForm
 
 def home(request):
     context = {
