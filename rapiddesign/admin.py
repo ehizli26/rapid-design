@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Image
+
+# Resim modelini admin paneline ekle
+admin.site.register(Image)
